@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title></title>
+  <style>
+    .container{
+      width: 380px;
+      height: 200px;
+      border: 2px solid black;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      animation-name: square;
+      animation-duration: 3s ;
+      animation-delay: ;
+      animation-iteration-count: infinite;
+    }
+    .circle{
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      background: red;
+      transition: 1s ease;
+      animation: ball 15s  infinite ease-out;
+      animation-fill-mode: 
+      
+    }
+    @keyframes square {
+      from{
+        transform: rotate(0)
+      }
+      to{
+        transform: rotate(360deg);
+      }
+    }
+    @keyframes ball{
+      0%{
+        transform: translate(0,0)
+      }
+      15%{
+        transform: translate(50px,-150px);
+      }
+      
+      30%{
+        transform: translate(80px,0px)
+      }
+      45%{
+        transform: translate(110px,-100px);
+      }
+      60%{
+        transform: translate(140px,0px);
+      }
+      75%{
+        transform:translate(170px,-50px);
+      }
+      90%{
+        transform:translate(200px,0px);
+      }
+      
+    }
+    .container2{
+      margin: 20px 0px;
+      width: 380px;
+      height: 200px;
+      border: 2px solid black;
+      position: relative;
+      animation-name: square
+      animation-duration: 3s ;
+      animation-delay: ;
+      animation-iteration-count: infinite;
+    }
+    .circle2{
+       width: 50px;
+       height: 50px;
+       border-radius: 50%;
+       position: absolute;
+       bottom:0;
+       left: 0;
+       background: black;
+       animation: first 1s ease-out  infinite alternate, linear,second 13s linear infinite;
+ 
+ 
+    }
+    @keyframes second{
+      from{
+        left:0%;
+      }
+      to{
+        left: 100%;
+      }
+    }
+    @keyframes first{
+     0%{
+       bottom:0;
+     }
+    
+    100%{
+      bottom:80%;
+    } 
+     
+    }
+  </style>
+</head>
+
+<body>
+<div class="container">
+  <div class="circle"></div>
+</div>
+
+<div class="container2">
+  <div class="circle2"></div>
+</div>
+
+</body>
+
+</html>
